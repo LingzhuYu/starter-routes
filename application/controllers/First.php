@@ -11,7 +11,7 @@
  *
  * @author lizewu
  */
-class First {
+class First extends Application{
     //put your code here
     function __construct()
 	{
