@@ -57,17 +57,10 @@ $route['sleep']='first/zzz';
 $route['show/(:num)'] = 'first/gimme/$1';
 $route['dunno'] = function(){
     $source = './data/surprise.jpg';
-    if(file_exists($source)){
-        header("Content-type: image/jpeg");
-        header('Content-Disposition: inline');
-        readfile($source);
-        die();
-    }else{
-        return "welcome";
-        
-    }
-    
-    
-    
+    header("Content-type: image/jpeg");
+    header('Content-Disposition: inline');
+    readfile($source);
+    die();
 };
+$route['[a-z][a-z][a-z][a-z]/bingo'] = 'bingo/index';
 
