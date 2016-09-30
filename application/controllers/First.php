@@ -11,7 +11,7 @@
  *
  * @author lizewu
  */
-class First {
+class First extends Application{
     //put your code here
     function __construct()
 	{
@@ -33,4 +33,16 @@ class First {
 
 		$this->render();
 	}
+        
+        public function zzz(){
+                $this->data['pagebody'] = 'justone';
+
+		// build the list of authors, to pass on to our view
+		$source = $this->quotes->first();
+                $this->data = array_merge($this->data, $source);
+		
+
+		$this->render();
+            
+        }
 }
