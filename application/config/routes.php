@@ -63,4 +63,5 @@ $route['dunno'] = function(){
     die();
 };
 $route['[a-z][a-z][a-z][a-z]/bingo'] = 'bingo/index';
+$route['comp[0-9][0-9][0-9][0-9]/(:any)'] = 'wise/bingo';
 
