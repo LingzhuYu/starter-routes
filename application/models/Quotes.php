@@ -46,6 +46,12 @@ class Quotes extends CI_Model {
 	{
 		return $this->data;
 	}
+        
+        public function first(){
+            
+            return $this->data[0];
+            
+        }
 
     //retrieve the last quote
     public function last()
