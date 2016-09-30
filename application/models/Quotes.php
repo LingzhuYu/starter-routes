@@ -52,11 +52,6 @@ class Quotes extends CI_Model {
             return $this->data[0];
             
         }
-        
-        public function third(){
-            $third = $this->data[2];
-            return $third;
-        }
 
         //retrieve the last quote
         public function last()
