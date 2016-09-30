@@ -51,7 +51,7 @@ class First extends Application{
             $this->data['pagebody'] = 'justone';
 
             // build the list of authors, to pass on to our view
-            $source = $this->quotes->third();
+            $source = $this->quotes->get(3);
 
             $this->data = array_merge($this->data, $source);
             $this->render();
