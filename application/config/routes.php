@@ -56,12 +56,12 @@ $route['lock/(:any)/(:any)'] = 'welcome/shucks';
 $route['sleep']='first/zzz';
 $route['show/(:num)'] = 'first/gimme/$1';
 $route['dunno'] = function(){
-    $source = './data/surprise.jpg';
+    $source = './data/quote1.jpg';
     header("Content-type: image/jpeg");
     header('Content-Disposition: inline');
     readfile($source);
     die();
 };
-$route['[a-z][a-z][a-z][a-z]/bingo'] = 'bingo/index';
-$route['comp[0-9][0-9][0-9][0-9]/(:any)'] = 'wise/bingo';
+$route['([a-z]{4})/bingo'] = 'bingo/index';
+$route['comp([0-9]{4})/(:any)'] = 'wise/bingo';
 
